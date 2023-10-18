@@ -1,0 +1,27 @@
+#login{
+    text-align: center;
+    size: 5px;
+    font-size: 20px;
+    color: beige;
+}
+#mobile{    
+    align-self: center; 
+    display: block;
+    border-radius: 5px;     
+    padding: auto;
+    border-spacing: 5px;
+}
+#otp{    
+    align-self: center; 
+    display: none;
+    color: beige;
+    border-radius: 5px;
+    padding: auto;
+}
+#savee{
+    display: block;
+    border-spacing: 56px;
+    text-align: center; 
+    border-radius: 5px;
+    padding: auto;
+}

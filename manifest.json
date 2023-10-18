@@ -1,0 +1,42 @@
+{
+    "name":"Auto_Otp",
+    "version":"3",
+    "description": "Automatically Filling the Otp from the mobile",
+    "permissions": ["storage", "tabs","activeTab", "scripting","offscreen"],
+    "host_permissions": ["https://www.scaler.com/*"],
+    "background": {
+    "service_worker": "background.js",
+    "type":"module"
+     },
+     
+    "content_scripts": [
+        {
+    "matches": ["https://www.scaler.com/*","https://github.com/*","https://outlook.live.com/*"],
+    "js": ["contentScript.js"]
+    } 
+    ],
+    "web_accessible_resources":[{
+        "resources":[
+            "./firestore/firebase-firestore.js",
+            "./firestore/firebase-app.js",
+            "./firestore/firebase_config.js"
+    ],
+    "matches": [ "https://example.com/*" ]
+    }],
+    "chrome_url_overrides" : {
+        "PAGE_TO_OVERRIDE": "overr.html"
+      },
+
+    "action":{
+        "default_icon":{
+            "16": "images/16.png",   
+            "24": "images/24.png",  
+            "32": "images/32.png" 
+        },
+        "default_title":"AUTO_OTP",
+        "default_popup":"pop.html"
+    },
+
+     
+    "manifest_version":3
+}
